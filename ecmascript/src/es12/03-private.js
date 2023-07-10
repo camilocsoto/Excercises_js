@@ -24,7 +24,7 @@ class user {
     }
 }
 const highRepublic = new user('sidius', 100)
-console.log(highRepublic.uAge); 
+console.log(highRepublic.uAge); //es 100. Pero no 
 console.log(highRepublic.uAge = 120); 
 /**
  * casos de uso:
