@@ -27,3 +27,29 @@ tripulacion.then((result) => {
 }).finally(() => {
     console.log('proceso terminado.');
 })
+
+/** Reto: función para mostrar un mensaje 2 segundos después. 
+ * way 1: promesa - setTimeout - resolve reject
+ * way 2: setTimeout - promesa - resolve reject
+ * Es recomendable el way 1
+ * ambas funcionan, pero en way 2 se debe repetir n cantidad de veces la promesa.
+ * 
+ */    
+
+function delay(time, message) { //way 1
+    return new Promise((resolve) => {
+      window.setTimeout(() => {
+        resolve(message);
+      }, time)
+    })
+  }
+  function delay(time, message) { //way 2
+    return globalThis.setTimeout(() => {
+        new Promise ((resolve, reject) => {
+            resolve(console.log(message))
+        })
+    }, time)
+  }
+
+
+delay(4000, 'Hello after 2s')
