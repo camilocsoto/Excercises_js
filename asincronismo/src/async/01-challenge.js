@@ -21,3 +21,16 @@ const articles = async (urlApi) => {
     }
 }
 articles(API)
+
+
+//Playground: ejecutar una función con un mensaje por defecto ya que la url es falsa.
+
+  async function runCode() {
+    const url = 'https://domain-api-com';
+    try {
+      await fetch(url)
+    } catch (error){ //es una buena práctica.
+      throw new Error('API Not Found');
+    }
+  }
+  runCode()
