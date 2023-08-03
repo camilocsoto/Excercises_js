@@ -21,7 +21,7 @@ function* iterable (array) {
 const it = iterable(['imperial ship','venator', 'x-wings', 'tie fighters'])
 
 console.log(it.next().value);
-console.log(it.next().value);
+console.log(it.next().value); 
 console.log(it.next().value);
 console.log(it.next().value);
 
