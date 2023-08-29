@@ -23,8 +23,8 @@
 * Esto te instalara la carpeta node con sus respectivas dependencias. Así mismo, la -y omitirá todas las preguntas que te hace al instalar node.
 + Instalar de forma local socket.io
 
-* ` $ npm i socket.io –save`
-*este commando agrega la API a package.json
+ ` $ npm i socket.io –save`
+* este commando agrega la API a package.json
 ### Ejecución
 + En la terminal de su preferencia, ubíquese en la raíz del proyecto
 
