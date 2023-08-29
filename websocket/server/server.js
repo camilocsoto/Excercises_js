@@ -2,7 +2,7 @@ const express = require('express'); //importa libreria express
 const path = require('path'); //importa libreria path
 const socketIO = require('socket.io'); // No trabaja con node pero sí con un servidor http
 const http = require('http'); //Para poder trabajar de forma local, el navegador ya lo incluye -
-const { log } = require('console');
+const { log } = require('console'); //Para debuggear
 const app = express(); //inicializa express
 let server = http.createServer(app) //montar servidor con todas las configuraciones de express -
 const publicPath = path.resolve(__dirname, '../public'); //compartir y hacer visible la carpeta "./public"
@@ -19,10 +19,9 @@ io.on('connection', (client)=> { //evalúa la conexión del cliente.
             client.on('disconnect', () => { // atributo client es para tomar el id del cliente
                 console.log('disconnected user');
             })
-                client.on('enviarMensaje', (message) => { //RECIBIR INFORMACION DEL CLIENTE: variable y atributo a recibir
-                    console.log(message);
+                client.on('enviarMensaje', (mensaje) => { //RECIBIR INFORMACION DEL CLIENTE: variable y atributo a recibir
+                    console.log(mensaje);
                 })
-
 })
 //Activar server
 server.listen(port, (err) => { //express escucha la variable y con la arrow function evalua el estado del server 
