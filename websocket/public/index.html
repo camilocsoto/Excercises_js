@@ -11,6 +11,19 @@
 <body>
     <h1>Estado del socket</h1>
     <p id="status_server"></p>
+    <h3>¿cómo envíar información al servidor?</h3>
+    <p>1. Copia el siguiente código en la consola del navegador</p>
+    <pre> 
+        <code>
+            socket.emit('enviarMensaje', { //nombre de la variable y el json para enviar info al server
+                usuario: 'user',
+                mensaje: `--escribe aquí para comunicarte con el servidor--`
+            });
+        </code>
+    </pre>
+    <p>2. Dale enter, y vé a la vista del servidor, allí valida que llegó el mensaje correctamente</p>
+    <h3>Mensajes del servidor</h3>
+    <p id="serverMessage"></p>
     <script src="socket.io/socket.io.js"></script> <!--cargar la libreria al front-->
     <script src="./js/code.js"></script>
 </body>
