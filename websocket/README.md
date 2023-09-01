@@ -2,6 +2,7 @@
 - Capaz de establecer una conversación entre dos o más usuarios, y actualizarse cada vez que haya un cambio, sin la necesidad de hacer un http.get cada n milisegundos.
 - Corre por defecto en el puerto 3000.
 - Envía archivos de tipo Json.
+- Link del video: ![](https://acortar.link/rcFIDg)
 - Topología:
 ![]( https://socket.io/images/bidirectional-communication.png)
 ### Recomendaciones previas a la instalación

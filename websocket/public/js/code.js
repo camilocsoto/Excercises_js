@@ -14,13 +14,9 @@ socket.emit('enviarMensaje', { //nombre de la variable y el json para enviar inf
     usuario: '<Front>',
     mensaje: `todo listo para empezar.`
 });
-
 socket.on('enviarMensaje', (mensaje) => { //nombre de la variable y el json para escuchar info del server
-        serverMessage.innerHTML = `servidor: ${JSON.stringify(mensaje)}`; //mandar info al front
+        serverMessage.innerHTML = `servidor: ${ JSON.stringify(mensaje)}`; //mandar info al front
 })
-
-
-
 setInterval(() => {
 p_status.innerHTML = statusServer;
 },2000)
