@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Socket</title>
 </head>
-
 <body>
     <h1>Estado del socket</h1>
-    <p id="status_server"></p>
+    <p id="status_server"></p> <!--mensaje que se actualiza cada 2 segundos.-->
     <h3>¿cómo envíar información al servidor?</h3>
     <p>1. Copia el siguiente código en la consola del navegador</p>
     <pre> 
@@ -20,12 +18,19 @@
                 mensaje: `--escribe aquí para comunicarte con el servidor--`
             });
         </code>
-    </pre>
+    </pre> <!--instrucciones para indicarle al usuario como enviar los datos mediante la consola.-->
     <p>2. Dale enter, y vé a la vista del servidor, allí valida que llegó el mensaje correctamente</p>
+    <p>. Form para envíar mensaje al servidor.</p>
+    <form> <!--formulario para que el usuario envíe los datos.-->
+        <label for="user">Usuario: </label>
+        <input type="text" id="user"><br/>
+        <label for="message">mensaje: </label>
+        <input type="text" id="message"><br/>
+        <input type="button" id="boton" value="envíar">
+    </form>
     <h3>Mensajes del servidor</h3>
     <p id="serverMessage"></p>
-    <script src="socket.io/socket.io.js"></script> <!--cargar la libreria al front-->
+    <script src="socket.io/socket.io.js"></script> <!--cargar la libreria de socket.io al front-->
     <script src="./js/code.js"></script>
 </body>
-
 </html>
